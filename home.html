@@ -1,61 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="home.css">
-  </head>
-  <body>
-    <header>
-    <nav>
-      <ul>
-        <li>
-          <img  class="logo" src="https://cdn.freebiesupply.com/logos/large/2x/ghostbusters-1-logo-png-transparent.png" alt="">
-        </li>
-        <li>
-          <form class="" action="peliculasgenero.html?genero=terror" method="get">
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="uikit-3.1.5/css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+<div class="uk-navbar-left">
 
-           <select class="genero" name="gen">
-             <option value="">GENERO</option>
-             <option value="">TERROR </option>
-             <option value=""> <a href="#">COMEDIA</a> </option>
-             <option value=""> <a href="#">ACCION</a> </option>
-             <option value=""> <a href="#">AVENTURA</a> </option>
-           </select>
-         <button type="submit" name="button">OK</button>
-       </form>
-         <li>
-          <a href="#">PREFERIDAS</a>
-        </li>
-        <li>
-            <a href="#"><form class="" action="home.html" method="get" >
-              <!-- hay que poner bien el action -->
-              <label for="">BUSCAR</label>
-              <input class="lupitaa" type="text" name="" value="">
-              <img class="lupita" src="https://images-na.ssl-images-amazon.com/images/I/51KHmHZGHUL.png" alt="">
-            </form></a>
-        </li>
-        <li>
-          <a href="#">LOGIN</a>
-        </li>
-      </ul>
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
 
-    </nav>
-    </header>
+        <ul class="uk-navbar-nav">
+            <li>
+                <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
+                    Features
+                </a>
+            </li>
+        </ul>
 
-    <footer>
+        <div class="uk-navbar-item">
+            <div>Some <a href="#">Link</a></div>
+        </div>
 
-    </footer>
+        <div class="uk-navbar-item">
+            <form action="javascript:void(0)">
+                <input class="uk-input uk-form-width-small" type="text" placeholder="Input">
+                <button class="uk-button uk-button-default">Button</button>
+            </form>
+        </div>
+
+</div>
+</nav>
 
     <div class="POPULARES">
 
     </div>
 
-
-
-  </body>
+</body>
 
   <script type="text/javascript" src="home.js">
 
   </script>
+
 </html>

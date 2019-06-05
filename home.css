@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 *{
   box-sizing: border-box;
 }
@@ -103,3 +104,106 @@ margin-bottom: 0;
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.poster{
+  width: 100%;
+  height: 100px;
+}
+=======
+<<<<<<< Updated upstream
+=======
+/* *{
+  box-sizing: border-box;
+  margin:0;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+body{
+  background-color: black;
+}
+
+
+nav{
+  overflow: hidden;
+  height: 100px;
+  width: 100%;
+  background-color: lightblue;
+}
+nav ul{
+  margin:0;
+  padding:0;
+  overflow: hidden;
+
+  }
+nav ul li{
+  width: 15%;
+  float: left;
+  color: white;
+  margin-left: 0;
+  text-align: center;
+  padding-top: 45px;
+  line-height: 10px;
+  height: 20%;
+  list-style:none;
+  font-size: 1.5em;
+  margin-right: 5%;
+}
+nav ul li a{
+  text-decoration: none;
+color: white;
+}
+
+nav ul li a:hover {
+
+  color: grey;
+}
+
+nav ul li:nth-child(4){
+  margin-left: 14%;
+  margin-right: 1%;
+  width: 20%;
+  padding-top: 25px;
+  overflow: hidden;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+  text-align: right;
+  width: 10%;
+}
+nav ul li:nth-child(1){
+padding-left: 0;
+  padding-top: 0;
+  margin-left: 0;
+  text-align: left;
+  display: block;
+  margin-right: 0;
+}
+
+.genero {
+  background: transparent;
+  background-color: white; /* fallback color if gradients are not supported */
+  }
+
+.logo{
+  width: 100%;
+  height: 100%;
+}
+
+.lupita{
+  width: 10%;
+  float: left;
+}
+
+.lupitaa{
+  width: 90%;
+  float: left;
+  padding-top: 5px;
+  margin-top: 5px;
+} */
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

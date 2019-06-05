@@ -18,7 +18,7 @@ console.log(information.results);
     var imagen= arrayDePeliculas[i].poster_path
     var id= arrayDePeliculas[i].id
 document.querySelector(".POPULARES").innerHTML+= "<h2><a href= detalle.html?idGif="+ id + ">" +  titulo + "</a></h2>"
-document.querySelector(".POPULARES").innerHTML+= "<img src= " + url + imagen + ">"
+document.querySelector(".photos").innerHTML+= "<li> <img src= " + url + imagen + "> </li>"
 }
 
 

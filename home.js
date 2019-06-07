@@ -92,3 +92,5 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
 
     .catch(function(error) { console.log("Error: " + error);
     })
+
+    new WarpSpeed ('myCanvas')

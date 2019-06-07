@@ -5,8 +5,28 @@
 body {
   background-color: black;
 }
+#myCanvas{
+  height: 100%;
+  width: 100%;
+}
 nav{
   background-color: steelblue;
+  z-index: 900;
+}
+
+.button3{
+ display:inline-block;
+ padding:0.3em 1.2em;
+ margin:0 0.3em 0.3em 0;
+ border-radius:2em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#FFFFFF;
+ background-color:#4eb5f1;
+ text-align:center;
+ transition: all 0.2s;
 }
 
 .buscador{
@@ -20,12 +40,18 @@ li a.login{
 
 footer{
   overflow: hidden;
+  z-index: 900;
+  position: relative;
 }
 .logotmdb, .nombres{
     float: left; width: 45%; margin-right: 10%;
 }
 .logotmdb img{
 padding-top: 1%; max-width: 100%;
+z-index: 900;
+}
+.logotmdb{
+  z-index: 900;
 }
 .nombres{
   color: white; margin-right: 0; text-align: right; font-size: 100%; font-family: sans-serif; position: relative; top:30px; right:0;

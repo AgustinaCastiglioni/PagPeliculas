@@ -20,7 +20,7 @@ console.log(information.results);
 elementoHTML = "<div class='uk-overlay uk-overlay-primary uk-position-bottom uk-text-center'>"
 elementoHTML +=   "<p class='uk-margin-remove'>"+titulo+"</p>"
 elementoHTML += "</div>"
-document.querySelector(".photos").innerHTML+= "<li> <a href= detalle.html?idGif="+ id + "> <img src= " + url + imagen + ">"  +elementoHTML + "</a></li>"
+document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idGif="+ id + "> <img src= " + url + imagen + ">"  +elementoHTML + "</a></li>"
 
 }
 
@@ -50,8 +50,10 @@ document.querySelector(".photos").innerHTML+= "<li> <a href= detalle.html?idGif=
       var imagen= arrayDePeliculas[i].poster_path
       var id= arrayDePeliculas[i].id
         var url = "https://image.tmdb.org/t/p/original"
-  document.querySelector(".MEJORESPUNTUADAS").innerHTML+= "<h2><a href= detalle.html?idGif="+ id + ">" +  titulo + "</a></h2>"
-  document.querySelector(".fotos").innerHTML+= "<li> <img src= " + url + imagen + "> </li>"
+        elementoHTML = "<div class='uk-overlay uk-overlay-primary uk-position-bottom uk-text-center'>"
+        elementoHTML +=   "<p class='uk-margin-remove'>"+titulo+"</p>"
+        elementoHTML += "</div>"
+        document.querySelector(".fotospunt").innerHTML+= "<li> <a href= detalle.html?idGif="+ id + "> <img src= " + url + imagen + ">"  +elementoHTML + "</a></li>"
   }
 
 
@@ -77,9 +79,11 @@ document.querySelector(".photos").innerHTML+= "<li> <a href= detalle.html?idGif=
       var titulo= arrayDePeliculas[i].original_title
       var imagen= arrayDePeliculas[i].backdrop_path
       var id= arrayDePeliculas[i].id
-        var url = "https://image.tmdb.org/t/p/original"
-  document.querySelector(".PROXIMAMENTE").innerHTML+= "<h2><a href= detalle.html?idGif="+ id + ">" +  titulo + "</a></h2>"
-  document.querySelector(".fotosprox").innerHTML+= "<li> <img src= " + url + imagen + "> </li>"
+      var url = "https://image.tmdb.org/t/p/original"
+        elementoHTML = "<div class='uk-overlay uk-overlay-primary uk-position-bottom uk-text-center'>"
+        elementoHTML +=   "<p class='uk-margin-remove'>"+titulo+"</p>"
+        elementoHTML += "</div>"
+        document.querySelector(".fotosprox").innerHTML+= "<li> <a href= detalle.html?idGif="+ id + "> <img src= " + url + imagen + ">"  +elementoHTML + "</a></li>"
   }
 
 

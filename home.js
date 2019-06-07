@@ -17,8 +17,11 @@ console.log(information.results);
     var titulo= arrayDePeliculas[i].title
     var imagen= arrayDePeliculas[i].poster_path
     var id= arrayDePeliculas[i].id
-document.querySelector(".POPULARES").innerHTML+= "<h2><a href= detalle.html?idGif="+ id + ">" +  titulo + "</a></h2>"
-document.querySelector(".photos").innerHTML+= "<li> <img src= " + url + imagen + "> </li>"
+elementoHTML = "<div class='uk-overlay uk-overlay-primary uk-position-bottom uk-text-center'>"
+elementoHTML +=   "<p class='uk-margin-remove'>"+titulo+"</p>"
+elementoHTML += "</div>"
+document.querySelector(".photos").innerHTML+= "<li> <a href= detalle.html?idGif="+ id + "> <img src= " + url + imagen + ">"  +elementoHTML + "</a></li>"
+
 }
 
 

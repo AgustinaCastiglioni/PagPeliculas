@@ -1,5 +1,5 @@
 window.onload= function(){
-
+  // # no se donde cerramos este onload
 var url = "https://image.tmdb.org/t/p/original"
 
   fetch("https://api.themoviedb.org/3/movie/popular?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US&page=1")
@@ -94,3 +94,28 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
     })
 
     new WarpSpeed ('myCanvas')
+
+    fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US")
+    .then(function(response) { return response.json()
+    console.log(response);
+    })
+
+    .then(function(information) {
+
+  var arrayDeGeneros= information.genres
+
+  console.log(information.genres);
+
+  for (var i = 0; i < arrayDeGeneros.length; i++) {
+  var nombres = arrayDeGeneros[i].name
+
+   document.querySelector(".generos-drop").innerHTML += "<a href= https://www.google.com.ar>" + nombres + "</a>"
+
+  }
+
+
+
+    })
+
+    .catch(function(error) { console.log("Error: " + error);
+    })

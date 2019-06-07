@@ -1,4 +1,15 @@
 window.onload= function(){
+
+  if (localStorage.getItem("nombre") == null) {
+      console.log(1);
+document.querySelector(".peliculaspreferidas").style.display= "none"
+  }
+  else {
+    document.querySelector(".login").innerHTML = localStorage.getItem("nombre")
+    document.querySelector(".peliculaspreferidas").style.display= "block"
+  }
+
+
   // # no se donde cerramos este onload
 var url = "https://image.tmdb.org/t/p/original"
 
@@ -119,3 +130,60 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
 
     .catch(function(error) { console.log("Error: " + error);
     })
+
+var formulario= document.querySelector(".FORMLOGIN")
+var formularionombre= document.querySelector(".nombreform")
+var formularioemail= document.querySelector(".emailform")
+var formulariogenero= document.querySelector(".generoform")
+
+formulario.onsubmit= function(event){
+
+
+  var huboError = false
+
+if(formularionombre.value == "" || formularionombre.value.length < 2 ){
+  huboError = true
+  event.preventDefault();
+  UIkit.notification({
+			message: 'El nombre esta vacio o es muy corto',
+			status: 'danger',
+			pos: 'top-center',
+			timeout: 5000
+		})
+}
+
+if(formularioemail.value == "" || !validateEmail(formularioemail.value)){
+  huboError = true
+  event.preventDefault();
+  UIkit.notification({
+			message: 'Llenar campos',
+			status: 'danger',
+			pos: 'top-center',
+			timeout: 5000
+		})
+}
+if (formulariogenero.value == "") {
+  huboError = true
+  event.preventDefault();
+}
+
+if (!huboError) {
+  window.localStorage.setItem("nombre", formularionombre.value);
+}
+
+}
+
+
+
+
+
+
+
+// CARACTERES >1, NO TIENE QUE ESTAR VACIO, EMAIL TIENE QUE SER EMAIL QUE NO ESTE VACIO, GENERO QUE NO ESTE VACIO
+// GUARDAR DATA EN LOCAL STORAGE
+// REEMPLAZAR LOGIN POR NOMBRE DEL USUARIO
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}

@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="uikit-3.1.5/css/uikit.min.css" />
+    <link rel="stylesheet" href="uikit-3.1.5/css/uikit.css" />
     <script src="uikit-3.1.5/js/uikit.min.js"></script>
     <script src="uikit-3.1.5/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="home.css">
@@ -31,15 +32,13 @@
       </div>
   </div>
           <ul class="uk-navbar-nav">
-              <li>
-                  <a href="#">
+              <li class="peliculaspreferidas">
+                  <a href="#" >
                       <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
                       PELICULAS PREFERIDAS
                   </a>
               </li>
           </ul>
-
-
           <div class="uk-navbar-item">
               <form action="javascript:void(0)" class="buscador">
                   <input class="uk-input uk-form-width-small" type="text">
@@ -47,12 +46,45 @@
               </form>
           </div>
           <ul class="uk-navbar-nav">
-              <li>
-                  <a href="#" class="login">
-                      <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
+              <li class="login">
+                  <a href="#modal-example" uk-toggle class="login">
+                      <span class="uk-icon uk-margin-small-right" uk-icon=""></span>
                       LOGIN
                   </a>
               </li>
+
+<!-- This is the modal -->
+<div id="modal-example" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body" style="background-color: rgba(0, 0, 0, 0.8)">
+ 					        <h2 class="uk-modal-title" style="color:white">Sign In</h2>
+
+ 									<form class="FORMLOGIN" action="home.html" method="post">
+ 										<div class="uk-inline">
+ 											<span class="uk-form-icon" uk-icon="icon: user"></span>
+ 											<input class="uk-input nombreform" type="text" name="user" value="" placeholder="Nombre">
+ 										</div>
+
+ 										<hr>
+
+ 										<div class="uk-inline">
+ 											<span class="uk-form-icon" uk-icon="icon: mail"></span>
+ 											<input class="uk-input emailform" type="email" name="mail" value="" placeholder="Email">
+ 										</div>
+
+	                  <hr>
+
+                    <div class="uk-inline">
+                      <span class="uk-form-icon" uk-icon="icon: heart"></span>
+                      <input class="uk-input generoform" type="text" name="mail" value="" placeholder="Género">
+                    </div>
+
+ 					        <!-- <p>Cuerpo del Modal... Notese que tanto el boton como el link pueden activar el mismo modal, siempre y cuando el "target" sea el correcto</p> -->
+ 					        <p class="uk-text-right">
+ 					            <!-- <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button> -->
+ 					            <button class="uk-button uk-button-primary" type="submit">Submit</button>
+ 					        </p>
+ 								</form>
+</div>
           </ul>
       </div>
   </nav>

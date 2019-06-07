@@ -5927,8 +5927,8 @@ ul.uk-nav-sub {
 .uk-notification-message {
   position: relative;
   padding: 15px;
-  background: #f8f8f8;
-  color: #666;
+  background: black;
+  color: #851313;
   font-size: 1.25rem;
   line-height: 1.4;
   cursor: pointer;

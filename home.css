@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 *{
   box-sizing: border-box;
 }
@@ -33,9 +33,10 @@ nav{
   position: absolute;
   right:10%;
 }
-li a.login{
+.login{
   position:relative;
-  right: -820%;
+  right: -10%;
+
 }
 
 footer{
@@ -136,11 +137,12 @@ margin-bottom: 0;
   height: 100px;
 }
 
+
 div div ul.centrar li{
   text-align: center;
 }
 
-div div ul.centrar li img{
+.logo {
   width: 100%;
 }
 

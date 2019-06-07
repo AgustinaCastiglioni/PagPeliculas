@@ -1,4 +1,4 @@
-window.onload= function(){
+window.addEventListener("load", function(){
 
   if (localStorage.getItem("nombre") == null) {
       console.log(1);
@@ -40,7 +40,7 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
   })
 
   .catch(function(error) { console.log("Error: " + error);
-  })}
+  })
 
 
 
@@ -119,8 +119,9 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
 
   for (var i = 0; i < arrayDeGeneros.length; i++) {
   var nombres = arrayDeGeneros[i].name
+  var id = arrayDeGeneros[i].id
 
-   document.querySelector(".generos-drop").innerHTML += "<a href= https://www.google.com.ar>" + nombres + "</a>"
+   document.querySelector(".generos-drop").innerHTML += "<a href='generos.html?idgenero=" + id + "'>" + nombres + "</a>"
 
   }
 
@@ -130,6 +131,8 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
 
     .catch(function(error) { console.log("Error: " + error);
     })
+
+})
 
 var formulario= document.querySelector(".FORMLOGIN")
 var formularionombre= document.querySelector(".nombreform")

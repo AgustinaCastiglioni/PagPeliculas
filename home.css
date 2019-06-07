@@ -95,6 +95,7 @@ margin-bottom: 0;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
+  d
 }
 
 /* Add a red background color to boton-genero links on hover */
@@ -110,6 +111,8 @@ margin-bottom: 0;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  overflow: scroll;
+  height: 200px;
 }
 
 /* Links inside the dropdown */

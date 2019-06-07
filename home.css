@@ -15,7 +15,7 @@ body {
 }
 li a.login{
   position:relative;
-  right: -1050%;
+  right: -820%;
 }
 
 footer{
@@ -25,10 +25,10 @@ footer{
     float: left; width: 45%; margin-right: 10%;
 }
 .logotmdb img{
-  width: 30%; height: 150px; padding-top: 1%;
+padding-top: 1%; max-width: 100%;
 }
 .nombres{
-  color: white; margin-right: 0; text-align: right; font-size: 100%; font-family: sans-serif; position: relative; top:70px; right:0;
+  color: white; margin-right: 0; text-align: right; font-size: 100%; font-family: sans-serif; position: relative; top:30px; right:0;
 }
 h5{
 margin-top: 0;

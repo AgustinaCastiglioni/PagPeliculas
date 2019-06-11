@@ -10,9 +10,10 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
   }
 
 
-  // # no se donde cerramos este onload
-var url = "https://image.tmdb.org/t/p/original"
+ var url = "https://image.tmdb.org/t/p/original"
 
+
+// aca es el carrousel POPULARES
   fetch("https://api.themoviedb.org/3/movie/popular?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US&page=1")
   .then(function(response) { return response.json()
   console.log(response);
@@ -43,6 +44,7 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
   })
 
 
+  // aca es el carrousel MEJORESPUNTUADAS
 
     fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US&page=1")
     .then(function(response) { return response.json()
@@ -73,6 +75,9 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
 
     .catch(function(error) { console.log("Error: " + error);
     })
+
+
+    // aca es el carrousel PROXIMAMENTE
 
     fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US&page=1")
     .then(function(response) { return response.json()
@@ -106,6 +111,9 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
 
     new WarpSpeed ('myCanvas')
 
+
+    // Esto de abajo es el js para la lista de generos
+
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US")
     .then(function(response) { return response.json()
     console.log(response);
@@ -133,6 +141,8 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
     })
 
 })
+
+// Aca esta el js para el login
 
 var formulario= document.querySelector(".FORMLOGIN")
 var formularionombre= document.querySelector(".nombreform")

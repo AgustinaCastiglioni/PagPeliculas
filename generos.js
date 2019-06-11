@@ -1,6 +1,6 @@
 window.onload = function(){
 
-
+// js para el LOGIN
   if (localStorage.getItem("nombre") == null) {
       console.log(1);
 document.querySelector(".peliculaspreferidas").style.display= "none"
@@ -16,7 +16,7 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
 
   var idGenero = queryString.get("idgenero")
 
-
+ // esto es el js para las peliculas del genero
   fetch("https://api.themoviedb.org/3/discover/movie?api_key=063b16f0b4b52316bdf354da4c0177d7&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres=" + idGenero)
   .then(function(response) { return response.json()
   console.log(response);
@@ -44,6 +44,8 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
   .catch(function(error) { console.log("Error: " + error);
   })
 
+
+   // Esto de abajo es el js para la lista de generos
 
   fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US")
   .then(function(response) { return response.json()
@@ -103,4 +105,3 @@ console.log(information.genres);
 
 
 }
-new WarpSpeed ('myCanvas')

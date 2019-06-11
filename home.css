@@ -1,58 +1,35 @@
-
 *{
   box-sizing: border-box;
 }
 body {
   background-color: black;
 }
-#myCanvas{
-  height: 100%;
-  width: 100%;
-}
 nav{
-  background-color: steelblue;
-  z-index: 900;
-}
-
-.button3{
- display:inline-block;
- padding:0.3em 1.2em;
- margin:0 0.3em 0.3em 0;
- border-radius:2em;
- box-sizing: border-box;
- text-decoration:none;
- font-family:'Roboto',sans-serif;
- font-weight:300;
- color:#FFFFFF;
- background-color:#4eb5f1;
- text-align:center;
- transition: all 0.2s;
+  background-color: black;
 }
 
 .buscador{
   position: absolute;
-  right:10%;
+  right:-10%;
 }
-.login{
+.itemm{
+    padding:0;
+}
+li a.login{
   position:relative;
-  right: -10%;
-
+  right: -820%;
 }
-
+.login a{
+padding:0;
+}
 footer{
   overflow: hidden;
-  z-index: 900;
-  position: relative;
 }
 .logotmdb, .nombres{
     float: left; width: 45%; margin-right: 10%;
 }
 .logotmdb img{
 padding-top: 1%; max-width: 100%;
-z-index: 900;
-}
-.logotmdb{
-  z-index: 900;
 }
 .nombres{
   color: white; margin-right: 0; text-align: right; font-size: 100%; font-family: sans-serif; position: relative; top:30px; right:0;
@@ -64,7 +41,7 @@ margin-bottom: 0;
 /* boton-genero container */
 .boton-genero {
   overflow: hidden;
-  background-color: steelblue;
+  background-color: black;
   font-family: sans-serif;
 }
 
@@ -95,7 +72,6 @@ margin-bottom: 0;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
-  d
 }
 
 /* Add a red background color to boton-genero links on hover */
@@ -135,21 +111,6 @@ margin-bottom: 0;
   display: block;
 }
 
-.poster{
-  width: 100%;
-  height: 100px;
-}
-
-
-div div ul.centrar li{
-  text-align: center;
-}
-
-.logo {
-  width: 100%;
-}
-
-
 footer{
-  background-color: steelblue;
+  background-color: black;
 }

@@ -37,15 +37,17 @@
                     </a>
                 </li>
             </ul>
-            <div class="uk-navbar-item">
-                <form action="generos.html" class="buscador" method="get">
-                    <input class="uk-input uk-form-width-small" type="text" name="busqueda" value="">
-                    <button class="uk-button uk-button-default button3" type="submit">Buscar</button>
-                </form>
-            </div>
+            <div class="uk-navbar-left" >
+             <div class="uk-navbar-item itemm">
+                 <form class="uk-search uk-search-navbar buscador" action="generos.html" class="buscador" method="get" >
+                     <span uk-search-icon></span>
+                     <input class="uk-search-input" type="search" name="busqueda" value="" placeholder="Search...">
+                 </form>
+             </div>
+         </div>
             <ul class="uk-navbar-nav">
                 <li class="login">
-                    <a href="#modal-example" uk-toggle class="login">
+                    <a href="#modal-example" uk-toggle>
                         <span class="uk-icon uk-margin-small-right" uk-icon=""></span>
                         LOGIN
                     </a>

@@ -5,12 +5,15 @@ body {
   background-color: black;
 }
 nav{
-  background-color: steelblue;
+  background-color: black;
 }
 
 .buscador{
   position: absolute;
-  right:10%;
+  right:-10%;
+}
+.itemm{
+    padding:0;
 }
 li a.login{
   position:relative;
@@ -36,7 +39,7 @@ margin-bottom: 0;
 /* boton-genero container */
 .boton-genero {
   overflow: hidden;
-  background-color: steelblue;
+  background-color: black;
   font-family: sans-serif;
 }
 
@@ -107,5 +110,5 @@ margin-bottom: 0;
 }
 
 footer{
-  background-color: steelblue;
+  background-color: black;
 }

@@ -5,7 +5,7 @@ window.addEventListener("load", function(){
 document.querySelector(".peliculaspreferidas").style.display= "none"
   }
   else {
-    document.querySelector(".login").innerHTML = localStorage.getItem("nombre")
+    document.querySelector(".login").innerHTML = "Hola " + localStorage.getItem("nombre")
     document.querySelector(".peliculaspreferidas").style.display= "block"
   }
 

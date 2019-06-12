@@ -32,7 +32,7 @@ console.log(information.results);
 elementoHTML = "<div class='uk-overlay uk-overlay-primary uk-position-bottom uk-text-center'>"
 elementoHTML +=   "<p class='uk-margin-remove'>"+titulo+"</p>"
 elementoHTML += "</div>"
-document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idGif="+ id + "> <img src= " + url + imagen + ">"  +elementoHTML + "</a></li>"
+document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "> <img src= " + url + imagen + ">" + elementoHTML + "</a></li>"
 
 }
 
@@ -99,7 +99,7 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
         elementoHTML = "<div class='uk-overlay uk-overlay-primary uk-position-bottom uk-text-center'>"
         elementoHTML +=   "<p class='uk-margin-remove'>"+titulo+"</p>"
         elementoHTML += "</div>"
-        document.querySelector(".fotosprox").innerHTML+= "<li> <a href= detalle.html?idGif="+ id + "> <img src= " + url + imagen + ">"  +elementoHTML + "</a></li>"
+        document.querySelector(".fotosprox").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "> <img src= " + url + imagen + ">"  +elementoHTML + "</a></li>"
   }
 
 
@@ -109,7 +109,7 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
     .catch(function(error) { console.log("Error: " + error);
     })
 
-    new WarpSpeed ('myCanvas')
+    // new WarpSpeed ('myCanvas')
 
 
     // Esto de abajo es el js para la lista de generos
@@ -142,6 +142,7 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idG
 
 })
 
+  new WarpSpeed ('myCanvas')
 // Aca esta el js para el login
 
 var formulario= document.querySelector(".FORMLOGIN")

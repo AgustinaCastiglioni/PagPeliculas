@@ -1,4 +1,4 @@
-window.onload = function(){
+window.addEventListener("load", function(){
 
 // js para el LOGIN
   if (localStorage.getItem("nombre") == null) {
@@ -104,4 +104,4 @@ console.log(information.genres);
     })
 
 
-}
+})

@@ -1,4 +1,17 @@
 window.addEventListener("load", function(){
+
+
+
+  if (localStorage.getItem("nombre") == null) {
+      console.log(1);
+document.querySelector(".peliculaspreferidas").style.display= "none"
+  }
+  else {
+    document.querySelector(".login").innerHTML = "Hola " + localStorage.getItem("nombre")
+    document.querySelector(".peliculaspreferidas").style.display= "block"
+  }
+
+
   // ACA ESTA EL CODIGO DE LA BARRA DE BUSQUEDA
 
  var queryStringObj= new URLSearchParams(window.location.search);

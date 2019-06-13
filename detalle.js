@@ -1,4 +1,14 @@
 window.addEventListener("load", function(){
+  
+  if (localStorage.getItem("nombre") == null) {
+      console.log(1);
+document.querySelector(".peliculaspreferidas").style.display= "none"
+  }
+  else {
+    document.querySelector(".login").innerHTML = "Hola " + localStorage.getItem("nombre")
+    document.querySelector(".peliculaspreferidas").style.display= "block"
+  }
+
 
   var queryStringObj= new URLSearchParams(window.location.search);
   console.log(queryStringObj);

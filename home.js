@@ -108,7 +108,7 @@ document.querySelector(".populares").innerHTML+= "<li> <a href= detalle.html?idm
 
     })
 
-    .catch(function(error) { console.log("Error: " + error);
+    .catch(function(error) { console.log("Errror: " + error);
     })
 
     // new WarpSpeed ('myCanvas')

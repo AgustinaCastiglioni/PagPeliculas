@@ -131,7 +131,7 @@ document.querySelector(".populares").innerHTML+= "<li> <a href= detalle.html?idm
   var nombres = arrayDeGeneros[i].name
   var id = arrayDeGeneros[i].id
 
-   document.querySelector(".generos-drop").innerHTML += "<a href='generos.html?idgenero=" + id + "'>" + nombres + "</a>"
+document.querySelector(".generos-drop").innerHTML += "<a href='generos.html?idgenero=" + id + "&nombregenero="+nombres+ "'>" + nombres + "</a>"
 
   }
 

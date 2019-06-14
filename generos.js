@@ -15,6 +15,8 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
   queryString = new URLSearchParams(queryString)
 
   var idGenero = queryString.get("idgenero")
+  var nombreGen= queryString.get("nombregenero")
+  document.querySelector(".nombredegenero").innerHTML= "<h2>" + nombreGen + "</h2>"
 
  // esto es el js para las peliculas del genero
   fetch("https://api.themoviedb.org/3/discover/movie?api_key=063b16f0b4b52316bdf354da4c0177d7&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres=" + idGenero)
@@ -35,7 +37,7 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
         var url = "https://image.tmdb.org/t/p/original"
           elementoHTML = "<div class='uk-position-center uk-panel'>"
           elementoHTML += "</div>"
-          document.querySelector(".generardo").innerHTML+= "<li>  <img src= " + url + imagen + ">"  + elementoHTML + "</li>"
+          document.querySelector(".generardo").innerHTML+= "<li>  <a href= detalle.html?idmovie="+ id + "><img src= " + url + imagen + ">"  + elementoHTML + "</li>"
   }
 
 
@@ -59,8 +61,8 @@ var arrayDeGeneros= information.genres
 for (var i = 0; i < arrayDeGeneros.length; i++) {
 var nombres = arrayDeGeneros[i].name
 var id = arrayDeGeneros[i].id
-document.querySelector(".generos-drop").innerHTML += "<a href='generos.html?idgenero=" + id + "'>" + nombres + "</a>"
-document.querySelector(".nombredegenero").innerHTML= "<h2>" + nombres + "</h2>"
+document.querySelector(".generos-drop").innerHTML += "<a href='generos.html?idgenero=" + id + "&nombregenero="+nombres+ "'>" + nombres + "</a>"
+
 }
 
 console.log(information.genres);

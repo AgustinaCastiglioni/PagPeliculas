@@ -108,6 +108,17 @@ margin-bottom: 0;
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.detalledepelicula{
+height: 539px;
+width: 43%;
+display: flex;
+margin: auto
+flex-direction: column;
+justify-content: center;
+}
+.fotito{
+  height: 100%;
+}
 
 footer{
   background-color: black;

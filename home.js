@@ -142,7 +142,7 @@ document.querySelector(".fotospopu").innerHTML+= "<li> <a href= detalle.html?idm
 
 })
 
-  new WarpSpeed ('myCanvas')
+
 // Aca esta el js para el login
 
 var formulario= document.querySelector(".FORMLOGIN")

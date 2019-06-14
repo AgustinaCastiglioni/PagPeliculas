@@ -1,4 +1,21 @@
 window.addEventListener("load", function(){
+
+  // Obtengo la info de local storage
+  var json = localStorage.getItem("pelisFavoritas")
+
+  // Si ya habia favoritos..
+  if (json != null) {
+    // Desempaquetar el string JSON
+    var objLit = JSON.parse(json)
+
+    // De todo el objeto literal me interesa EL ARRAY
+    var favoritos = objLit.peliculas
+
+  } else {
+    // Si no habia creo el listado como VACIO
+    var favoritos = []
+  }
+
   if (localStorage.getItem("nombre") == null) {
       console.log(1);
 document.querySelector(".peliculaspreferidas").style.display= "none"
@@ -39,7 +56,7 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
 
        var h2=""
        for (var i = 0; i < generos.length; i++) {
-         h2+= '<a href="generos.html?idgenero=' + generos[i].id +  '&nombregenero='+ generos[i].name +'">'+ generos[i].name +'</a>' 
+         h2+= '<a href="generos.html?idgenero=' + generos[i].id +  '&nombregenero='+ generos[i].name +'">'+ generos[i].name +'</a>'
        }
 
           document.querySelector(".infodepelicula").innerHTML+= "<h2>" +  titulo + "</h2>"
@@ -47,9 +64,38 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
           document.querySelector(".infodepelicula").innerHTML+= "<h3>" +  h2 + "</h3>"
           document.querySelector(".uk-accordion-content").innerHTML+= "<p>" + sinopsis + "</p>"
           document.querySelector(".infodepelicula").innerHTML+= "<h3>" +  fechaestreno + "</h3>"
-          document.querySelector(".detalledepelicula").innerHTML+= "<img class=fotito src= " + urlposter + imagen + ">"
+          document.querySelector(".detalledepelicula").innerHTML+= "<div style='position:relative'><a class='estrellita' style='position:absolute' href='' uk-icon='icon:star;ratio:3'></a><img class=fotito src= " + urlposter + imagen + "></div>"
 
+          if (favoritos.indexOf(idMovie) != -1) {
+            document.querySelector(".estrellita").style.color = "gold"
+          }
 
+          document.querySelector(".estrellita").onclick = function(e) {
+            e.preventDefault()
+            if (favoritos.indexOf(idMovie) == -1) {
+              // Lo agrega
+              favoritos.push(idMovie)
+              // Actualiza el boton
+              this.style.color = "gold"
+            } else {
+              // Lo quita
+              var posicion = favoritos.indexOf(idMovie)
+              favoritos.splice(posicion,1)
+              // Actualiza el boton
+              this.style.color = "gray"
+            }
+
+            //Vuelvo a crear el objeto
+            obj = {
+              peliculas: favoritos
+            }
+
+            // LO transformo en JSON
+            json = JSON.stringify(obj)
+
+            // Lo guardo en Local Storage
+            localStorage.setItem("pelisFavoritas", json)
+          }
       })
 
       .catch(function(error) { console.log("Error: " + error);

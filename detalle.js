@@ -1,5 +1,4 @@
 window.addEventListener("load", function(){
-  
   if (localStorage.getItem("nombre") == null) {
       console.log(1);
 document.querySelector(".peliculaspreferidas").style.display= "none"
@@ -39,6 +38,9 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
 
       .catch(function(error) { console.log("Error: " + error);
       })
+
+
+
 
 
 

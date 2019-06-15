@@ -110,11 +110,21 @@ margin-bottom: 0;
 }
 .detalledepelicula{
 height: 539px;
-width: 43%;
 display: flex;
 margin: auto
-flex-direction: column;
-justify-content: center;
+/* flex-direction: column;
+justify-content: center; */
+overflow: hidden;
+}
+.fotodetalle, .infodepelicula{
+width: 45%;
+}
+.infodepelicula{
+  margin-left: 5%;
+}
+.fotodetalle{
+  text-align: center;
+  margin-right: 5%;
 }
 .fotito{
   height: 100%;

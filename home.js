@@ -34,7 +34,7 @@ for (var i = 0; i < arrayDePeliculas.length; i++) {
   var id= arrayDePeliculas[i].id
   elementoHTML = "<div class='uk-position-center uk-panel'>"
   elementoHTML += "</div>"
-document.querySelector(".populares").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "><img src= " + url + imagen + ">" + elementoHTML + "</a></li>"
+document.querySelector(".populares").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "><figure class=imghvr-zoom-out-down style=background-color:black;><img src= " + url + imagen + ">" + "<figcaption class=masinfo style=background-color:black;> MÁS INFORMACIÓN </figcaption></figure>" + elementoHTML + "</a></li>"
 
 }
 
@@ -66,7 +66,7 @@ document.querySelector(".populares").innerHTML+= "<li> <a href= detalle.html?idm
     var id= arrayDePeliculas[i].id
     elementoHTML = "<div class='uk-position-center uk-panel'>"
     elementoHTML += "</div>"
-  document.querySelector(".puntuadas").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "><img src= " + url + imagen + ">" + elementoHTML + "</a></li>"
+  document.querySelector(".puntuadas").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "><figure class=imghvr-zoom-out-down style=background-color:black;><img src= " + url + imagen + ">" + "<figcaption class=masinfo style=background-color:black;> MÁS INFORMACIÓN </figcaption></figure>" + elementoHTML + "</a></li>"
 
   }
 
@@ -100,7 +100,7 @@ document.querySelector(".populares").innerHTML+= "<li> <a href= detalle.html?idm
       var id= arrayDePeliculas[i].id
       elementoHTML = "<div class='uk-position-center uk-panel'>"
       elementoHTML += "</div>"
-    document.querySelector(".proximas").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "><img src= " + url + imagen + ">" + elementoHTML + "</a></li>"
+    document.querySelector(".proximas").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "><figure class=imghvr-zoom-out-down style=background-color:black;><img src= " + url + imagen + ">" + "<figcaption class=masinfo style=background-color:black;> MÁS INFORMACIÓN </figcaption></figure>" + elementoHTML + "</a></li>"
 
     }
 

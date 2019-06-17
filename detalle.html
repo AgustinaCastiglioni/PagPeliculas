@@ -11,7 +11,25 @@
     <script src="uikit-3.1.5/js/uikit.min.js"></script>
     <script src="uikit-3.1.5/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="detalle.css">
-    <script type="text/javascript" src="warpspeed-1.0/warpspeed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FAVICON -->
+<link rel="apple-touch-icon" sizes="57x57" href="PAGPELI.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="PAGPELI.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="PAGPELI.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="PAGPELI.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="PAGPELI.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="PAGPELI.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="PAGPELI.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="PAGPELI.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="PAGPELI.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="PAGPELI.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="PAGPELI.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="PAGPELI.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="PAGPELI.ico/favicon-16x16.png">
+<link rel="manifest" href="PAGPELI.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="PAGPELI.ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
@@ -96,17 +114,42 @@
 
 <div class="detalledepelicula">
 
-</div>
-<div class="infodepelicula">
-  <ul uk-accordion>
-      <li class="uk-open">
-          <a class="uk-accordion-title" href="#"> SINOPSIS </a>
-          <div class="uk-accordion-content">
+  <div class="infodepelicula">
+    <ul uk-accordion>
+        <li class="uk-open">
+            <a class="uk-accordion-title" href="#"> Sinópsis </a>
+            <div class="uk-accordion-content">
 
-          </div>
-      </li>
-  </ul>
+            </div>
+        </li>
+    </ul>
+<h3>Calificación</h3>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+<br>
+<br>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay">Ver Recomendaciones</button>
+
+<div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-thumbnav uk-thumbnav-vertical fotosrecomendadas" uk-margin>
+
+
+      </ul>
+
+
+    </div>
 </div>
+</div>
+</div>
+
 <footer>
 <div class="logotmdb">
      <img src="http://southpolesoftware.com/iVI/images/moviedb3.png" width="130" height="150"alt="">

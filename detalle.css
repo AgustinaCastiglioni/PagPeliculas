@@ -112,10 +112,9 @@ margin-bottom: 0;
 height: 539px;
 display: flex;
 margin: auto
-/* flex-direction: column;
-justify-content: center; */
 overflow: hidden;
 }
+
 .fotodetalle, .infodepelicula{
 width: 45%;
 }
@@ -130,6 +129,9 @@ width: 45%;
   height: 100%;
 }
 
+.checked {
+  color: orange;
+}
 footer{
   background-color: black;
 }

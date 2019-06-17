@@ -26,7 +26,7 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
   }
 
 
-  // var url= "https://api.themoviedb.org/3/movie/" + idMovie + "?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US"
+
 
   var queryString = location.search
   queryString = new URLSearchParams(queryString)
@@ -41,7 +41,6 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
       .then(function(information) {
         console.log(information);
 
- var url = "https://image.tmdb.org/t/p/original"
     var peliculas= information
     var urlposter= "https://image.tmdb.org/t/p/original"
         var titulo= peliculas.original_title
@@ -51,7 +50,7 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
        var fechaestreno= peliculas.release_date
 
        // var video=
-       // var generos=
+
        var generos= peliculas.genres
 
        var h2=" "
@@ -100,6 +99,35 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
 
       .catch(function(error) { console.log("Error: " + error);
       })
+
+
+
+      fetch("  https://api.themoviedb.org/3/movie/"+ idMovie + "/recommendations?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US&page=1")
+            .then(function(response) { return response.json()
+            console.log(response);
+            })
+
+            .then(function(information) {
+
+        console.log(information.results)
+          var info= information.results
+        for (var i = 0; i < info.length; i++) {
+          var titulo= info[i].title
+          var urlposter= "https://image.tmdb.org/t/p/original"
+          var imagenposter= info[i].poster_path
+          var id= info[i].id
+
+          document.querySelector(".fotosrecomendadas").innerHTML+= "<li><a href=detalle.html?idmovie=" + id + "><img src=" + urlposter + imagenposter +  "></a></li>"
+        }
+
+
+
+          })
+
+            .catch(function(error) { console.log("Error: " + error);
+            })
+
+
 
 
       fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US")

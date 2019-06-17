@@ -17,7 +17,7 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
  var queryStringObj= new URLSearchParams(window.location.search);
  console.log(queryStringObj);
  var query= queryStringObj.get("busqueda");
- document.querySelector(".loquebusco").innerHTML= "<h2> Resultado de busqueda: ''" + query + "''</h2>"
+ document.querySelector(".loquebusco").innerHTML= "<h2 class=generotitulo> Resultado de busqueda: ''" + query + "''</h2>"
  console.log(query);
 
   var url = "https://api.themoviedb.org/3/search/movie?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US&query=" + query + "&page=1&include_adult=false"

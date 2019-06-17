@@ -72,6 +72,7 @@ var url = "https://image.tmdb.org/t/p/original"
       var lenguaje= peliculas.original_language
       var sinopsis= peliculas.overview
      var fechaestreno= peliculas.release_date
+     var id= peliculas.id
 
      // var video=
 
@@ -79,7 +80,7 @@ var url = "https://image.tmdb.org/t/p/original"
 
 
 
-        document.querySelector(".peliculasprefe").innerHTML+= "<div class='cadapelicula' style='position:relative'><h2 class='h2pref'>" +  titulo + "</h2><a class='estrellita' style='position:absolute' href='' uk-icon='icon:star;ratio:3'></a><img class=fotito src= " + urlposter + imagen + "></div>"
+        document.querySelector(".peliculasprefe").innerHTML+= "<div class='cadapelicula' style='position:relative'><h2 class=h2pref>" +  titulo + "</h2><a class='estrellita' style='position:absolute' href='' uk-icon='icon:star;ratio:3'></a><a href= detalle.html?idmovie="+ id + "><img class=fotito src= " + urlposter + imagen + "></a></div>"
 
         if (favoritos.indexOf(idMovie) != -1) {
           document.querySelector(".estrellita").style.color = "gold"

@@ -119,6 +119,7 @@ width: auto%;
 }
 .cadapelicula{
   width: 30%;
+
 }
 
 footer{
@@ -130,4 +131,6 @@ footer{
   height: 40px;
   overflow: hidden;
   white-space: nowrap;
+  font-family: Helvetica;
+  color: white;
 }

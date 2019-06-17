@@ -44,6 +44,11 @@ margin-bottom: 0;
 }
 
 
+.generotitulo {
+  font-family: Helvetica;
+  color: white;
+}
+
 /* Links inside the boton-genero */
 .boton-genero a {
   float: left;

@@ -40,7 +40,8 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
           var url = "https://image.tmdb.org/t/p/original"
             elementoHTML = "<div class='uk-position-center uk-panel'>"
             elementoHTML += "</div>"
-            document.querySelector(".generardo").innerHTML+= "<li>   <a href= detalle.html?idmovie="+ id + "> <img src= " + url + imagen + "></a>"  + elementoHTML + "</li>"
+            document.querySelector(".generardo").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "><figure class=imghvr-zoom-out-down style=background-color:black;><img src= " + url + imagen + ">" + "<figcaption class=masinfo style=background-color:black;> MÁS INFORMACIÓN </figcaption></figure>" + elementoHTML + "</a></li>"
+
     }
 
     })

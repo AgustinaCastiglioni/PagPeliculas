@@ -55,15 +55,15 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
 
        var h2=" "
        for (var i = 0; i < generos.length; i++) {
-         h2+= '<a href="generos.html?idgenero=' + generos[i].id +  '&nombregenero='+ generos[i].name +'">'+ generos[i].name + ", " +'</a>'
+         h2+= '<a class=generinga href="generos.html?idgenero='+ generos[i].id +  '&nombregenero='+ generos[i].name +'">' + "|" + generos[i].name + "|" +'</a>'
        }
 
-          document.querySelector(".infodepelicula").innerHTML+= "<h1>" +  titulo + "</h1>"
-          document.querySelector(".infodepelicula").innerHTML+= "<h3> Idioma: " +  lenguaje + "</h3>"
-          document.querySelector(".infodepelicula").innerHTML+= "<h3> Género/os: " +  h2 + "</h3>"
-          document.querySelector(".uk-accordion-content").innerHTML+= "<p>" + sinopsis + "</p>"
-          document.querySelector(".infodepelicula").innerHTML+= "<h3> Fecha de estreno: " +  fechaestreno + "</h3>"
-          document.querySelector(".detalledepelicula").innerHTML+= "<div class=fotodetalle style='position:relative'><a class='estrellita' style='position:absolute' href='' uk-icon='icon:star;ratio:3'></a><img class=fotito src= " + urlposter + imagen + "></div>"
+          document.querySelector(".infodepelicula").innerHTML+= "<h1 class=color>" +  titulo + "</h1>"
+          document.querySelector(".infodepelicula").innerHTML+= "<h3 class=color> Idioma: " +  lenguaje + "</h3>"
+          document.querySelector(".infodepelicula").innerHTML+= "<h3 class=color> Género/os: " +  h2 + "</h3>"
+          document.querySelector(".uk-accordion-content").innerHTML+= "<p class= color>" + sinopsis + "</p>"
+          document.querySelector(".infodepelicula").innerHTML+= "<h3 class= color> Fecha de estreno: " +  fechaestreno + "</h3>"
+          document.querySelector(".divfoto").innerHTML+= "<div class=fotodetalle style='position:relative'><a class='estrellita' style='position:absolute' href='' uk-icon='icon:star;ratio:3'></a><img class=fotito src= " + urlposter + imagen + "></div>"
 
           if (favoritos.indexOf(idMovie) != -1) {
             document.querySelector(".estrellita").style.color = "gold"

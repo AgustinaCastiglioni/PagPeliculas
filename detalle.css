@@ -109,24 +109,32 @@ margin-bottom: 0;
   display: block;
 }
 .detalledepelicula{
-height: 539px;
-display: flex;
-margin: auto
 overflow: hidden;
 }
 
-.fotodetalle, .infodepelicula{
+.divfoto {
+  float: left;
 width: 45%;
+margin-right: 0;
+text-align: center;
 }
-.infodepelicula{
-  margin-left: 5%;
+.tienelosdos{
+  float: left;
+  width: 45%;
+  margin-right: 2%;
+  margin-left: 8%;
+
 }
-.fotodetalle{
-  text-align: center;
-  margin-right: 5%;
+
+.color{
+ color: white;
+ font-family: Helvetica;
 }
 .fotito{
-  height: 100%;
+  width:50%;
+  border: #1e87f0;
+  border-style: outset;
+
 }
 
 .checked {
@@ -134,4 +142,32 @@ width: 45%;
 }
 footer{
   background-color: black;
+}
+
+@media only screen and (max-width: 400px) {
+
+.detalledepelicula{
+    overflow: none;
+
+  }
+.tienelosdos{
+  width: 100%;
+}
+
+.divfoto{
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.fotito{
+  width: 90%;
+}
+
+.generinga{
+  margin-right: 20px;
+}
+
+
+
 }

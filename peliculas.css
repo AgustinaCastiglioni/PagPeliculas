@@ -134,3 +134,18 @@ footer{
   font-family: Helvetica;
   color: white;
 }
+
+
+@media only screen and (max-width: 400px) {
+
+
+.h2pref{
+  font-size: 1rem;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+
+
+
+}

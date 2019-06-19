@@ -123,3 +123,35 @@ footer{
   text-align: center;
   font-weight: bold;
 }
+
+
+
+/* el boton para el menusito */
+.invisible {
+  display: none;
+  z-index: 9999;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .invisible {
+    display: block;
+
+  }
+#altodelmenu {
+  height: 80px;
+}
+
+.loguito{
+  width: 100px;
+}
+/* hacemos desaparecer las cosas que van dentro del menusito */
+  .desaparece {
+    display: none;
+  }
+
+.dropdown .dropbtn {
+  padding: 12px 8px 12px 4px;
+}
+
+}

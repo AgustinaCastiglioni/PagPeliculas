@@ -36,7 +36,7 @@
   <nav class=" uk-margin" uk-navbar>
       <div class="uk-navbar-left">
     <a href="home.html">
-    <img src="http://icons.iconarchive.com/icons/evermor-design/entertain-me/256/Movie-Clapper-icon.png" width="130" height="80"alt="">
+    <img class="loguito" src="http://icons.iconarchive.com/icons/evermor-design/entertain-me/256/Movie-Clapper-icon.png" width="130" height="80"alt="">
     </a>
 
   <div class="boton-genero">
@@ -49,7 +49,7 @@
               </div>
       </div>
   </div>
-          <ul class="uk-navbar-nav">
+          <ul class="uk-navbar-nav desaparece">
               <li class="peliculaspreferidas">
                   <a href="peliculas.html" >
                       <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
@@ -58,7 +58,43 @@
               </li>
           </ul>
 
-          <div class="uk-navbar-left">
+          <!-- // boton menu media query -->
+
+                    <button id="altodelmenu" class="uk-button uk-button-default invisible uk-position-right" type="button" uk-toggle="target: #offcanvas-flip">
+                      <img style="width:2.2rem" src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color/254000/30-512.png" alt="">
+                    </button>
+
+          <div id="offcanvas-flip" class="" uk-offcanvas="flip: true; overlay: true">
+              <div class="uk-offcanvas-bar">
+
+                  <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+                  <ul class="uk-navbar-nav">
+                      <li class="peliculaspreferidas">
+                          <a href="peliculas.html" >
+                              <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
+                              PELICULAS PREFERIDAS
+                          </a>
+                      </li>
+                  </ul>
+
+                  <div class="uk-navbar-left">
+                   <div class="uk-navbar-item itemm">
+                       <form class="uk-search uk-search-navbar buscador" action="busqueda.html" class="buscador" method="get" >
+                           <span uk-search-icon></span>
+                           <input class="uk-search-input text" type="search" name="busqueda" value="" placeholder="Buscar...">
+                       </form>
+                   </div>
+                  </div>
+
+
+
+              </div>
+          </div>
+
+          <!-- // termina menu media query -->
+
+          <div class="uk-navbar-left desaparece">
            <div class="uk-navbar-item itemm">
                <form class="uk-search uk-search-navbar buscador" action="busqueda.html" class="buscador" method="get" >
                    <span uk-search-icon></span>

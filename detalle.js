@@ -49,7 +49,6 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
         var sinopsis= peliculas.overview
        var fechaestreno= peliculas.release_date
 
-       // var video=
 
        var generos= peliculas.genres
 
@@ -154,7 +153,22 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
 
 
 
+      fetch("https://api.themoviedb.org/3/movie/"+ idMovie + "/videos?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US")
+      .then(function(response) { return response.json()
+      console.log(response);
+      })
 
+      .then(function(information) {
+
+    var arrayDeTrailers= information.results
+var key= information.results[0].key
+document.querySelector(".trailer").href= "https://www.youtube.com/watch?v=" + key
+
+    console.log(information.results);
+    })
+
+      .catch(function(error) { console.log("Error: " + error);
+      })
 
 
 

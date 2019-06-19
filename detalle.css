@@ -140,6 +140,9 @@ text-align: center;
 .checked {
   color: orange;
 }
+.uk-button-default{
+  color: white;
+}
 footer{
   background-color: black;
 }

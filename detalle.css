@@ -36,6 +36,9 @@ h5{
 margin-top: 0;
 margin-bottom: 0;
 }
+.uk-button-default{
+  border-radius: 10px;
+}
 /* boton-genero container */
 .boton-genero {
   overflow: hidden;

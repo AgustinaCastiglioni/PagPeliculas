@@ -51,6 +51,7 @@ margin-bottom: 0;
 .generotitulo {
   font-family: Helvetica;
   color: white;
+  width: 80%;
 }
 
 /* Links inside the boton-genero */

@@ -20,6 +20,10 @@ li a.login{
   right: -820%;
 }
 
+.errorrr{
+  color: red;
+}
+
 footer{
   overflow: hidden;
 }

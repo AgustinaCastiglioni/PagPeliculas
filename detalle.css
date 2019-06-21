@@ -193,6 +193,9 @@ footer{
     overflow: none;
 
   }
+  .uk-button-default {
+    border-radius: 10px;
+}
 .tienelosdos{
   width: 100%;
 }

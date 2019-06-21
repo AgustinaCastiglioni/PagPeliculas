@@ -19,6 +19,9 @@ li a.login{
   position:relative;
   right: -820%;
 }
+.uk-button-default {
+    border-radius: 10px;
+}
 
 .errorrr{
   color: red;

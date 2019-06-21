@@ -26,7 +26,7 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
   }
 
 
-
+// agarrar la peli por su id
 
   var queryString = location.search
   queryString = new URLSearchParams(queryString)
@@ -54,15 +54,18 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
 
        var h2=" "
        for (var i = 0; i < generos.length; i++) {
-         h2+= '<a class=generinga href="generos.html?idgenero='+ generos[i].id +  '&nombregenero='+ generos[i].name +'">' + "|" + generos[i].name + "|" +'</a>'
+         h2+= '<a class=generinga href="generos.html?idgenero='+ generos[i].id +  '&nombregenero='+ generos[i].name +'">' + "- " + generos[i].name + " -" +'</a>'
        }
 
           document.querySelector(".infodepelicula").innerHTML+= "<h1 class=color>" +  titulo + "</h1>"
           document.querySelector(".infodepelicula").innerHTML+= "<h3 class=color> Idioma: " +  lenguaje + "</h3>"
-          document.querySelector(".infodepelicula").innerHTML+= "<h3 class=color> Género/os: " +  h2 + "</h3>"
+          document.querySelector(".infodepelicula").innerHTML+= "<h3 class='color anchitomedia'> Género/os: " +  h2 + "</h3>"
           document.querySelector(".uk-accordion-content").innerHTML+= "<p class= color>" + sinopsis + "</p>"
           document.querySelector(".infodepelicula").innerHTML+= "<h3 class= color> Fecha de estreno: " +  fechaestreno + "</h3>"
           document.querySelector(".divfoto").innerHTML+= "<div class=fotodetalle style='position:relative'><a class='estrellita' style='position:absolute' href='' uk-icon='icon:star;ratio:3'></a><img class=fotito src= " + urlposter + imagen + "></div>"
+
+
+// la parte de favoritos
 
           if (favoritos.indexOf(idMovie) != -1) {
             document.querySelector(".estrellita").style.color = "gold"
@@ -100,7 +103,7 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
       })
 
 
-
+// recomendaciones aca
       fetch("  https://api.themoviedb.org/3/movie/"+ idMovie + "/recommendations?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US&page=1")
             .then(function(response) { return response.json()
             console.log(response);

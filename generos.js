@@ -15,8 +15,9 @@ document.querySelector(".peliculaspreferidas").style.display= "none"
   queryString = new URLSearchParams(queryString)
 
   var idGenero = queryString.get("idgenero")
-  var nombreGen= queryString.get("nombregenero")
+  var nombreGen = queryString.get("nombregenero")
   document.querySelector(".nombredegenero").innerHTML= "<h2 class=generotitulo>" + nombreGen + "</h2>"
+  // esto es el nombre del genero
 
  // esto es el js para las peliculas del genero
   fetch("https://api.themoviedb.org/3/discover/movie?api_key=063b16f0b4b52316bdf354da4c0177d7&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres=" + idGenero)

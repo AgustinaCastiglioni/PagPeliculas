@@ -67,7 +67,7 @@ document.querySelector(".populares").innerHTML+= "<li> <a href= detalle.html?idm
     elementoHTML = "<div class='uk-position-center uk-panel'>"
     elementoHTML += "</div>"
   document.querySelector(".puntuadas").innerHTML+= "<li> <a href= detalle.html?idmovie="+ id + "><figure class=imghvr-zoom-out-down style=background-color:black;><img src= " + url + imagen + ">" + "<figcaption class=masinfo style=background-color:black;> MÁS INFORMACIÓN </figcaption></figure>" + elementoHTML + "</a></li>"
-
+// aca esta lo de mas info
   }
 
 

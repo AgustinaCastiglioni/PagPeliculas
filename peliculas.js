@@ -9,6 +9,8 @@ window.addEventListener("load", function(){
       document.querySelector(".peliculaspreferidas").style.display= "block"
     }
 
+
+
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=063b16f0b4b52316bdf354da4c0177d7&language=en-US")
     .then(function(response) { return response.json()
     console.log(response);
